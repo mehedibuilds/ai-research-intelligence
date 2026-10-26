@@ -3,7 +3,6 @@ from pip_api.workers.factory import build_worker
 from pip_api.models import JobStatus, ResearchJob, ResearchJobRequest
 from pip_api.services.jobs import JobStore
 from pip_api.services.planner import Planner
-from pip_api.workers.research import ResearchWorker
 
 store = JobStore()
 planner = Planner()
