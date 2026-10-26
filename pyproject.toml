@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "personal-intelligence-platform"
+version = "0.1.0"
+description = "Evidence-driven research job platform."
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115", "httpx>=0.27", "pydantic>=2.8", "pydantic-settings>=2.3", "sqlalchemy>=2.0", "structlog>=24.2", "uvicorn[standard]>=0.30"]
+
+[project.optional-dependencies]
+queue = ["redis>=5.0", "rq>=2.0"]
+dev = ["pytest>=8.2", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["apps/api/tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

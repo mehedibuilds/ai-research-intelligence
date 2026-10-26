@@ -1,0 +1,9 @@
+research:
+  max_sources_per_job: 30
+  permitted_engines: [web, product, b2b_leads, website_analysis]
+  require_citations: true
+  default_region: BD
+policy:
+  allow_network_research: true
+  max_job_budget_usd: 10
+  disallow_personal_data_enrichment: true
